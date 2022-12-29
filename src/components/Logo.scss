@@ -1,0 +1,37 @@
+
+$default-stripe-bg-color: #077407;
+$default-stripe-color: #015f01;
+
+.parallax-effect-glare-scale {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: repeating-linear-gradient(
+    45deg,
+    $default-stripe-color,
+    $default-stripe-color 35px,
+    $default-stripe-bg-color 35px,
+    $default-stripe-bg-color 70px
+  );
+  width: 150px;
+  height: 150px;
+//   background-color: darkgreen;
+  background: linear-gradient(89deg, #FF5EDF 0%, #04C8DE 100%);
+  color: white;
+  border: 3px solid black;
+  border-radius: 20px;
+
+  transform-style: preserve-3d;
+
+  .inner-element {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    font-style: italic;
+    color: white;
+    transform: translateZ(60px);
+  }
+}
