@@ -70,14 +70,15 @@ class App extends Component {
   };
 
   render() {
+    const { isSignedIn, imageURL, route, box } = this.state;
     return (
       <div className="App">
         <ParticlesBg type="circle" bg={true} />
         <Navi
-          isSignedIn={this.state.isSignedIn}
+          isSignedIn={isSignedIn}
           onRouteChange={this.onRouteChange}
         />
-        {this.state.route === "home" ? (
+        {route === "home" ? (
           <div>
             <Logo />
             <Rank />
@@ -86,8 +87,8 @@ class App extends Component {
               onButtonSubmit={this.onButtonSubmit}
             />
             <FaceRecognition
-              box={this.state.box}
-              imageURL={this.state.imageURL}
+              box={box}
+              imageURL={imageURL}
             />
           </div>
         ) : this.state.route === "signin" ? (
